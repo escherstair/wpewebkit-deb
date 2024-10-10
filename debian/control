@@ -4,41 +4,41 @@ Priority: optional
 Maintainer: Debian WebKit Maintainers <pkg-webkit-maintainers@lists.alioth.debian.org>
 Uploaders: Alberto Garcia <berto@igalia.com>
 Build-Depends: debhelper-compat (= 13),
-bubblewrap [amd64 arm64 armel armhf i386 mips64el ppc64el riscv64 s390x hppa ppc64 x32],
-xdg-dbus-proxy [amd64 arm64 armel armhf i386 mips64el ppc64el riscv64 s390x hppa ppc64 x32],
-libseccomp-dev [amd64 arm64 armel armhf i386 mips64el ppc64el riscv64 s390x hppa ppc64 x32],
-cmake (>= 3.16),
-gperf,
-libatk-bridge2.0-dev,
-libatk1.0-dev,
-libavif-dev,
-libcairo2-dev,
-libepoxy-dev,
-libgbm-dev,
-libgcrypt20-dev,
-libgstreamer-plugins-bad1.0-dev,
-libgstreamer-plugins-base1.0-dev,
-libgstreamer1.0-dev,
-libharfbuzz-dev,
-libicu-dev,
-libjpeg-dev,
-libjxl-dev,
-liblcms2-dev,
-libopenjp2-7-dev,
-libsoup-3.0-dev,
-libsqlite3-dev,
-libsystemd-dev,
-libtasn1-6-dev,
-libwayland-dev,
-libwebp-dev,
-libwoff-dev,
-libwpe-1.0-dev,
-libwpebackend-fdo-1.0-dev,
-libxslt1-dev,
-ninja-build,
-ruby:native,
-unifdef,
-wayland-protocols
+               bubblewrap [amd64 arm64 armel armhf i386 mips64el ppc64el riscv64 s390x hppa ppc64 x32],
+               xdg-dbus-proxy [amd64 arm64 armel armhf i386 mips64el ppc64el riscv64 s390x hppa ppc64 x32],
+               libseccomp-dev [amd64 arm64 armel armhf i386 mips64el ppc64el riscv64 s390x hppa ppc64 x32],
+               cmake (>= 3.16),
+               gperf,
+               libatk-bridge2.0-dev,
+               libatk1.0-dev,
+               libavif-dev,
+               libcairo2-dev,
+               libepoxy-dev,
+               libgbm-dev,
+               libgcrypt20-dev,
+               libgstreamer-plugins-bad1.0-dev,
+               libgstreamer-plugins-base1.0-dev,
+               libgstreamer1.0-dev,
+               libharfbuzz-dev,
+               libicu-dev,
+               libjpeg-dev,
+               libjxl-dev,
+               liblcms2-dev,
+               libopenjp2-7-dev,
+               libsoup-3.0-dev,
+               libsqlite3-dev,
+               libsystemd-dev,
+               libtasn1-6-dev,
+               libwayland-dev,
+               libwebp-dev,
+               libwoff-dev,
+               libwpe-1.0-dev,
+               libwpebackend-fdo-1.0-dev,
+               libxslt1-dev,
+               ninja-build,
+               ruby:native,
+               unifdef,
+               wayland-protocols
 Build-Depends-Indep: gi-docgen, gobject-introspection, libgirepository1.0-dev, libglib2.0-doc, libsoup-3.0-doc, jdupes
 Standards-Version: 4.7.0
 Rules-Requires-Root: no
@@ -51,69 +51,69 @@ Section: libdevel
 Architecture: linux-any
 Multi-Arch: same
 Depends: libwpewebkit-2.0-1 (= ${binary:Version}),
-libglib2.0-dev,
-libsoup-3.0-dev,
-libwpe-1.0-dev,
-${misc:Depends}
+         libglib2.0-dev,
+         libsoup-3.0-dev,
+         libwpe-1.0-dev,
+         ${misc:Depends}
 Suggests: libwpewebkit-doc
 Description: Web content engine for embedded devices - development files
-WebKit is a modern web engine that is able to display content such as
-HTML, SVG, XML, and others. It also supports DOM, XMLHttpRequest,
-XSLT, CSS, JavaScript/ECMAScript and more.
-.
-WPE WebKit is a WebKit port optimized for embedded devices and,
-unlike the GTK port, it does not depend on any particular UI toolkit
-and can be adapted to different use cases. It is designed with
-hardware acceleration in mind, leveraging common 3D graphics APIs for
-best performance.
-.
-This build provides version 2.0 of the API and uses libsoup v3 for
-the networking stack.
-.
-This package contains the development files.
+ WebKit is a modern web engine that is able to display content such as
+ HTML, SVG, XML, and others. It also supports DOM, XMLHttpRequest,
+ XSLT, CSS, JavaScript/ECMAScript and more.
+ .
+ WPE WebKit is a WebKit port optimized for embedded devices and,
+ unlike the GTK port, it does not depend on any particular UI toolkit
+ and can be adapted to different use cases. It is designed with
+ hardware acceleration in mind, leveraging common 3D graphics APIs for
+ best performance.
+ .
+ This build provides version 2.0 of the API and uses libsoup v3 for
+ the networking stack.
+ .
+ This package contains the development files.
 
 Package: libwpewebkit-2.0-1
 Architecture: linux-any
 Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends},
-${bwrap:Depends}
+         ${bwrap:Depends}
 Suggests: libwpebackend-fdo-1.0-1
 Description: Web content engine for embedded devices
-WebKit is a modern web engine that is able to display content such as
-HTML, SVG, XML, and others. It also supports DOM, XMLHttpRequest,
-XSLT, CSS, JavaScript/ECMAScript and more.
-.
-WPE WebKit is a WebKit port optimized for embedded devices and,
-unlike the GTK port, it does not depend on any particular UI toolkit
-and can be adapted to different use cases. It is designed with
-hardware acceleration in mind, leveraging common 3D graphics APIs for
-best performance.
-.
-This build provides version 2.0 of the API and uses libsoup v3 for
-the networking stack.
-.
-This package contains the shared libraries.
+ WebKit is a modern web engine that is able to display content such as
+ HTML, SVG, XML, and others. It also supports DOM, XMLHttpRequest,
+ XSLT, CSS, JavaScript/ECMAScript and more.
+ .
+ WPE WebKit is a WebKit port optimized for embedded devices and,
+ unlike the GTK port, it does not depend on any particular UI toolkit
+ and can be adapted to different use cases. It is designed with
+ hardware acceleration in mind, leveraging common 3D graphics APIs for
+ best performance.
+ .
+ This build provides version 2.0 of the API and uses libsoup v3 for
+ the networking stack.
+ .
+ This package contains the shared libraries.
 
 Package: wpewebkit-webdriver
 Architecture: linux-any
 Section: web
 Depends: libwpewebkit-2.0-1 (= ${binary:Version}),
-${shlibs:Depends},
-${misc:Depends}
+         ${shlibs:Depends},
+         ${misc:Depends}
 Breaks: wpewebkit-driver (<< 2.44.2-2~)
 Replaces: wpewebkit-driver (<< 2.44.2-2~)
 Description: WPE WebKit WebDriver support
-WebKit is a modern web engine that is able to display content such as
-HTML, SVG, XML, and others. It also supports DOM, XMLHttpRequest,
-XSLT, CSS, JavaScript/ECMAScript and more.
-.
-WPE WebKit is a WebKit port optimized for embedded devices and,
-unlike the GTK port, it does not depend on any particular UI toolkit
-and can be adapted to different use cases. It is designed with
-hardware acceleration in mind, leveraging common 3D graphics APIs for
-best performance.
-.
-This package provides the WebDriver service implementation.
+ WebKit is a modern web engine that is able to display content such as
+ HTML, SVG, XML, and others. It also supports DOM, XMLHttpRequest,
+ XSLT, CSS, JavaScript/ECMAScript and more.
+ .
+ WPE WebKit is a WebKit port optimized for embedded devices and,
+ unlike the GTK port, it does not depend on any particular UI toolkit
+ and can be adapted to different use cases. It is designed with
+ hardware acceleration in mind, leveraging common 3D graphics APIs for
+ best performance.
+ .
+ This package provides the WebDriver service implementation.
 
 Package: libwpewebkit-doc
 Build-Profiles: <!nodoc>
@@ -125,17 +125,17 @@ Breaks: libwpewebkit-1.0-doc (<< 2.42.5-2~)
 Replaces: libwpewebkit-1.0-doc (<< 2.42.5-2~)
 Suggests: devhelp
 Description: Web content engine for embedded devices - documentation
-WebKit is a modern web engine that is able to display content such as
-HTML, SVG, XML, and others. It also supports DOM, XMLHttpRequest,
-XSLT, CSS, JavaScript/ECMAScript and more.
-.
-WPE WebKit is a WebKit port optimized for embedded devices and,
-unlike the GTK port, it does not depend on any particular UI toolkit
-and can be adapted to different use cases. It is designed with
-hardware acceleration in mind, leveraging common 3D graphics APIs for
-best performance.
-.
-This package contains the documentation.
+ WebKit is a modern web engine that is able to display content such as
+ HTML, SVG, XML, and others. It also supports DOM, XMLHttpRequest,
+ XSLT, CSS, JavaScript/ECMAScript and more.
+ .
+ WPE WebKit is a WebKit port optimized for embedded devices and,
+ unlike the GTK port, it does not depend on any particular UI toolkit
+ and can be adapted to different use cases. It is designed with
+ hardware acceleration in mind, leveraging common 3D graphics APIs for
+ best performance.
+ .
+ This package contains the documentation.
 
 Package: libwpewebkit-1.0-doc
 Build-Profiles: <!nodoc>
@@ -144,7 +144,7 @@ Architecture: all
 Multi-Arch: foreign
 Depends: libwpewebkit-doc, ${misc:Depends}
 Description: WPE WebKit documentation - Transitional dummy package
-This is a transitional dummy package, it can be safely removed.
+ This is a transitional dummy package, it can be safely removed.
 
 Package: wpewebkit-driver
 Section: oldlibs
@@ -152,4 +152,4 @@ Architecture: all
 Multi-Arch: foreign
 Depends: wpewebkit-webdriver, ${misc:Depends}
 Description: WPE WebKit WebDriver support - transitional dummy package
-This is a transitional dummy package, it can be safely removed.
+ This is a transitional dummy package, it can be safely removed.
