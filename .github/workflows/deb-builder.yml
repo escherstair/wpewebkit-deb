@@ -5,20 +5,22 @@ on: push
 jobs:
   build:
     runs-on: self-hosted
-    permissions:
-      id-token: write
-      contents: read
-      attestations: write
-    strategy:
-      fail-fast: false
-      matrix:
-        arch: ["arm64"]
-    uses: torizon/torizon-deb-ci/.github/workflows/toradex-deb-ci.yml@main
-    with:
-      arch: ${{ matrix.arch }}
-      docker-image: debian:bookworm
-      package-name: weston
-      run-attestation: true
-      run-piuparts: false
-      upload-artifacts: true
-      extra-packages: libwpewebkit-1.1-dev devscripts curl debhelper libwpebackend-fdo-1.0-dev meson libmanette-0.2-dev libinput-dev libgbm-dev libdrm-dev debian-keyring
+    steps:
+    - name: Build Debian Package
+      permissions:
+        id-token: write
+        contents: read
+        attestations: write
+      strategy:
+        fail-fast: false
+        matrix:
+          arch: ["arm64"]
+      uses: torizon/torizon-deb-ci/.github/workflows/toradex-deb-ci.yml@main
+      with:
+        arch: ${{ matrix.arch }}
+        docker-image: debian:bookworm
+        package-name: weston
+        run-attestation: true
+        run-piuparts: false
+        upload-artifacts: true
+        extra-packages: libwpewebkit-1.1-dev devscripts curl debhelper libwpebackend-fdo-1.0-dev meson libmanette-0.2-dev libinput-dev libgbm-dev libdrm-dev debian-keyring
