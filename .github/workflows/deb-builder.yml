@@ -17,6 +17,7 @@ jobs:
       arch: ${{ matrix.arch }}
       docker-image: debian:bookworm
       package-name: weston
+      runner-system: self-hosted
       run-attestation: true
       run-piuparts: false
       upload-artifacts: true
